@@ -2,7 +2,12 @@ const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
+
+const Blog = require("./models/blog");
+
 const userRoute = require("./routes/user");
+const blogRoute = require("./routes/blog");
+
 const {
   checkForAuthenticationCookie,
 } = require("./middlewares/authentication");
@@ -28,5 +33,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/user", userRoute);
+app.use("/blog", blogRoute);
 
 app.listen(PORT, () => console.log(`App is listening on Port:${PORT}`));
