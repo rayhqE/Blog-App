@@ -28,7 +28,8 @@ app.use(checkForAuthenticationCookie("token"));
 app.use(express.static(path.resolve("./public")));
 
 app.get("/", async (req, res) => {
-  const allBlogs = await Blog.find({});
+  if (!req.user) return res.redirect("/user/signin");
+  const allBlogs = await Blog.find({ createdBy: req.user._id });
   res.render("home", {
     user: req.user,
     blogs: allBlogs,
