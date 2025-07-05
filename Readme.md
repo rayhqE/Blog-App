@@ -33,28 +33,22 @@ Blogify is a full-featured blogging web application built using the **MERN (with
 Blog-App/
 ├── middlewares/ # Custom Express middlewares
 │ └── authentication.js # JWT authentication middleware
-│
 ├── models/ # Mongoose schema models
 │ ├── blog.js # Blog schema
-│ ├── comment.js # Comment schema
+│ ├── comments.js # Comment schema
 │ └── user.js # User schema
-│
 ├── node_modules/ # Installed dependencies
-│
 ├── public/ # Public assets
 │ ├── images/ # (Unused / can be used for static images)
 │ └── uploads/ # Uploaded blog cover images
-│
 ├── routes/ # Express route handlers
 │ ├── blog.js # Blog-related routes
 │ └── user.js # User authentication routes
-│
 ├── services/ # Logic services
 │ └── authentication.js # Token creation/validation logic
-│
 ├── views/ # EJS templates
 │ ├── partials/ # Reusable EJS components
-│ │ ├── head.ejs # HTML <head> tag contents
+│ │ ├── head.ejs # HTML tag contents
 │ │ ├── nav.ejs # Navbar
 │ │ └── scripts.ejs # Scripts included at bottom
 │ ├── addBlog.ejs # Page for adding a blog
@@ -62,7 +56,6 @@ Blog-App/
 │ ├── home.ejs # Homepage with all blogs
 │ ├── signin.ejs # Login page
 │ └── signup.ejs # Register page
-│
 ├── index.js # Main Express app entry point
 ├── package.json # Project dependencies and scripts
 ├── package-lock.json # Exact versions of installed packages
