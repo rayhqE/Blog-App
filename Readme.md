@@ -30,6 +30,7 @@ Blogify is a full-featured blogging web application built using the **MERN (with
 
 ## 📂 Folder Structure
 
+```
 Blog-App/
 ├── middlewares/ # Custom Express middlewares
 │ └── authentication.js # JWT authentication middleware
@@ -60,6 +61,7 @@ Blog-App/
 ├── package.json # Project dependencies and scripts
 ├── package-lock.json # Exact versions of installed packages
 └── README.md # Project overview and instructions
+```
 
 ## 🛠️ Installation & Setup
 
